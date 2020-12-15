@@ -169,7 +169,7 @@ a.button{
 }
 .video-cn{
   position: absolute;
-  right:  20%;
-  top: 25;
+  margin-left: auto;
+  margin-right: auto;
   width: 100%;
 }
