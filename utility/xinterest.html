@@ -1,0 +1,70 @@
+<html>
+    <body>
+        <div>
+            <table>
+                <tr>
+                    <td>
+                        <table>
+                            <form name="myform" action="./xinterest.php" method="POST">
+                                <tr>
+                                    <td>
+                                        <label for="username">What is username?</label>
+                                    </td>
+                                    <td>
+                                        <input type="text" name="username" id="username" value="" placeholder="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="interests">What is your interest?</label>
+                                    </td>
+                                    <td>
+                                        <select name="interests" id="interests" multiple>
+                                            <option value="Engineering">Engineering</option>
+                                            <option value="Science">Science</option>
+                                            <option value="Art">Art</option>
+                                            <option value="Architecture">Architecture</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="education">What’s your highest level of education?</label>
+                                    </td>
+                                    <td>
+                                        <select name="education" id="education">
+                                            <option value="highschool">High school diploma</option>
+                                            <option value="bachelor">Bachelor's degree</option>
+                                            <option value="master">Master's degree</option>
+                                            <option value="doctorate">Doctorate degree</option>
+                                            <option value="professional">Professional degree</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="time">How much time you want to spend on topic?</label>
+                                    </td>
+                                    <td>
+                                        <select name="time" id="time">
+                                            <option value="4">4/Per week</option>
+                                            <option value="8">8/Per week</option>
+                                            <option value="9">8+/Per week</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                    </td>
+                                    <td>
+                                        <button type = "submit"  name="submit">Submit</button>
+                                    </td>
+                                </tr>
+                            </form>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
