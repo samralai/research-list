@@ -103,10 +103,10 @@ background: #000000;
     background: #fff;
     color: #000;
   }
-  #check:checked ~ ul{
+  /* check:checked ~ ul{
     left: 0;
-      background: #000000;
-  }
+    background: #000000;
+  } */
 }
 
 img.logos{
@@ -116,13 +116,15 @@ img.logos{
   margin-right: auto;
   display: block;
 }
-#myVideo {
+
+/* myVideo {
   position: fixed;
   right: 0;
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
-}
+} */
+
 .content {
   display: inline-block;
   bottom: 0;
@@ -171,5 +173,28 @@ a.button{
   position: absolute;
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
+}
+
+.container {
+  padding: 16px;
+  color: white;
+}
+
+.input {
+  padding: 12px 20px;
+  padding-left: 12px;
+  margin: 8px;
+  border: none;
+  background-color: white;
+}
+
+button {
+  background-color: gray;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px;
+  border: none;
+  cursor: pointer;
   width: 100%;
 }
