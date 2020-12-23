@@ -9,8 +9,24 @@ echo "Failed to connect to MySQL: " . mysqli_connect_error();
 $selected_title = mysqli_query($con,"SELECT title FROM articles WHERE id=1");
 $selected_author = mysqli_query($con,"SELECT author FROM articles WHERE id=1");
 $selected_doi = mysqli_query($con,"SELECT doi FROM articles WHERE id=1");
-$selected_content = mysqli_query($con,"SELECT author FROM articles WHERE id=1");
+$selected_content = mysqli_query($con,"SELECT content FROM articles WHERE id=1");
 
+
+while($row = mysqli_fetch_array($selected_title)) {
+    echo "<td>" . $row['title'] . "</td>";
+}
+
+while($row = mysqli_fetch_array($selected_author)) {
+    echo "<td>" . $row['author'] . "</td>";
+}
+
+while($row = mysqli_fetch_array($selected_doi)) {
+    echo "<td>" . $row['doi'] . "</td>";
+}
+
+while($row = mysqli_fetch_array($selected_content)) {
+    echo "<td>" . $row['content'] . "</td>";
+}
 
 mysqli_close($con);
 ?>
@@ -26,14 +42,15 @@ mysqli_close($con);
                 <tr>
                     <td>
                         <table width="380" border="0" cellpadding="10" cellspacing="10" align="right">
-                            <h3>Title <?php echo $selected_title ?> </h3><br/> <!-- select title from articles where id=1; -->
+                            <h3>Title:  <?php 
+                            while($row = mysqli_fetch_array($selected_title)) {
+                                echo "<td>" . $row['title'] . "</td>";
+                            }  
+                            ?>  </h3><br/> <!-- select title from articles where id=1; -->
                             <h5>Author: <?php echo $selected_author ?></h5><br/> <!-- select author from articles where id=1; -->
                             <h5>DOI: <?php echo $selected_doi ?></h5><br/> <!-- select doi from articles where id=1; -->
-                            <p>
-                                <?php echo $selected_content ?> 
-                                </p> <!-- select content from articles where id=1; -->
+                            <p>DOI: <?php echo $selected_content ?></p><br/><!-- select content from articles where id=1; -->
                         </table>
-                        <ashdkahsj akdha="1"></ashdkahsj>
                     </td>
                 </tr>
             </table>
