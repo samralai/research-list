@@ -16,4 +16,4 @@ const quiz = [
         answer:0
 
     }
-]
+] 
