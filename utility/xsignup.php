@@ -14,6 +14,7 @@
     $result=mysqli_query($conn,$sql);
     if($result == 1) {
       echo("Sign up succeeded");
+      header("Location: ../login.html");
     }
     else {
       echo("Sign up failed");
