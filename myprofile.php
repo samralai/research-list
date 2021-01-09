@@ -40,7 +40,7 @@ echo "<table class='container'>
   <form name='myform' action='./utility/xupdate.php' method='POST'>
     <tr>
       <td>
-        <font>Username</font>
+        <font>Full Name</font>
       </td>
       <td>";
 while($row = mysqli_fetch_array($selected_fullname)) {
@@ -51,7 +51,7 @@ echo "
     </tr>
     <tr>
       <td>
-        <font>Password</font>
+        <font>Username</font>
       </td>
       <td>";
 while($row = mysqli_fetch_array($selected_name)) {
@@ -69,6 +69,37 @@ while($row = mysqli_fetch_array($selected_email)) {
   echo "<input class='input' type='text' name='email' id='email' value='" . $row['email'] . "'>";
 }
 echo "
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <font></font>
+      </td>
+      <td>
+        <button type = 'submit' name='update'>Update</button>
+      </td>
+    </tr>
+  </form>
+</table>";
+
+// Change Password
+
+echo "<table class='container'>
+  <form name='changepasswordform' action='./utility/xupdatepass.php' method='POST'>
+    <tr>
+      <td>
+        <font>Current Password</font>
+      </td>
+      <td>
+        <input class='input' type='password' name='cpass' id='cpass' value='' placeholder=''>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <font>New Password</font>
+      </td>
+      <td>
+        <input class='input' type='password' name='npass' id='npass' value='' placeholder=''>
       </td>
     </tr>
     <tr>
