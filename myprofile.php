@@ -30,9 +30,11 @@ if (mysqli_connect_errno())
 {
 echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
-$selected_name = mysqli_query($con,"SELECT name FROM users WHERE id=1");
-$selected_pass = mysqli_query($con,"SELECT pass FROM users WHERE id=1");
-$selected_email = mysqli_query($con,"SELECT email FROM users WHERE id=1");
+session_start();
+$id = $_SESSION['id'];
+$selected_name = mysqli_query($con,"SELECT name FROM users WHERE id=$id");
+$selected_pass = mysqli_query($con,"SELECT pass FROM users WHERE id=$id");
+$selected_email = mysqli_query($con,"SELECT email FROM users WHERE id=$id");
 echo "<table class='container'>
   <form name='myform' action='./utility/xupdate.php' method='POST'>
     <tr>
@@ -73,7 +75,7 @@ echo "
         <font></font>
       </td>
       <td>
-        <button type = 'submit' name='login'>Register</button>
+        <button type = 'submit' name='update'>Update</button>
       </td>
     </tr>
   </form>

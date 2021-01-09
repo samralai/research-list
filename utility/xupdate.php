@@ -10,7 +10,7 @@
     if(!$conn){
         die("CONNECTION FAILED".mysqli_connect_error());
     }
-    $sql="UPDATE users.users SET name = '$username', pass = '$password', email = '$email' WHERE (id = '1')";
+    $sql="UPDATE users.users SET name = '$username', pass = '$password', email = '$email' WHERE (id = '" .$_SESSION['uname'] . "')";
     $result=mysqli_query($conn,$sql);
     if($result == 1) {
       echo "Update succeeded";
