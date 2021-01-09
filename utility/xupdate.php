@@ -1,7 +1,6 @@
 <?php
   session_start();
   $username= $_POST['name'];
-  $password= $_POST['pass'];
   $email= $_POST['email'];
   $fullname= $_POST['fullname'];
   $id= $_SESSION['id'];
@@ -18,7 +17,7 @@
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
       echo("Invalid email format");
     } else {
-      $sql="UPDATE users.users SET name = '$username', pass = '$password', email = '$email', fullname = '$fullname' WHERE (id = '" . $id . "')";
+      $sql="UPDATE users.users SET name = '$username', email = '$email', fullname = '$fullname' WHERE (id = '" . $id . "')";
       $result=mysqli_query($conn,$sql);
       if($result == 1) {
         echo "Update succeeded";
