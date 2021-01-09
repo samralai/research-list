@@ -17,6 +17,9 @@
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
                 echo ("Succeeded!");
+                session_start();
+                $_SESSION["id"] = $row['id'];
+                header("Location: ../index.html");
             }
         } else {
             echo ("Failed - Error: Invalid Password");
