@@ -45,11 +45,11 @@ $selected_name = mysqli_query($con,"SELECT name FROM users WHERE id=$id");
 $selected_pass = mysqli_query($con,"SELECT pass FROM users WHERE id=$id");
 $selected_email = mysqli_query($con,"SELECT email FROM users WHERE id=$id");
 $selected_fullname = mysqli_query($con,"SELECT fullname FROM users WHERE id=$id");
-echo "<table class='container'>
+echo "<center><table class='container'>
   <form name='myform' action='./utility/xupdate.php' method='POST'>
     <tr>
       <td>
-        <font>Full Name</font>
+        <font>Full Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
       </td>
       <td>";
 while($row = mysqli_fetch_array($selected_fullname)) {
@@ -89,11 +89,11 @@ echo "
       </td>
     </tr>
   </form>
-</table>";
+</table></center>";
 
 // Change Password
 
-echo "<table class='container'>
+echo "<center><table class='container'>
   <form name='changepasswordform' action='./utility/xupdatepass.php' method='POST'>
     <tr>
       <td>
@@ -120,7 +120,7 @@ echo "<table class='container'>
       </td>
     </tr>
   </form>
-</table>";
+</table></center>";
 }
 
 mysqli_close($con);
