@@ -10,15 +10,12 @@
     if(!$conn){
         die("CONNECTION FAILED".mysqli_connect_error());
     }
-    $check = "SELECT * FROM users.users WHERE id = '" . $id . "' AND  pass='$password'";
-    echo $check;
-    echo "<br>";
+    $check = "SELECT * FROM users.users WHERE id = '" . $id . "' AND  pass='$cpass'";
     $checkresult=mysqli_query($conn,$check);
     if($checkresult->num_rows > 0) {
-        $sql="UPDATE users.users SET pass = '$password' WHERE (id = '" . $id . "')";
+        $sql="UPDATE users.users SET pass = '$npass' WHERE (id = '" . $id . "')";
         $result=mysqli_query($conn,$sql);
         if($result == 1) {
-        echo $sql;
         echo "Update succeeded";
         }
         else {
