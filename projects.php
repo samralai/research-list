@@ -20,8 +20,8 @@ session_start();
 $id = $_SESSION['id'];
 echo "<ul>
         <li><a href='./'>Home</a></li>
-        <li><a href='projects.php'>Projects</a></li>
-        <li><a class='active' href='news.php'>News</a></li>";
+        <li><a class='active' href='projects.php'>Projects</a></li>
+        <li><a href='news.php'>News</a></li>";
 if(is_null($id)) {
   echo "<li><a href='login.html'>SignIn</a></li>
   <li><a href='signup.html'>SignUp</a></li>";
