@@ -370,7 +370,7 @@ button {
   text-align: center;
   z-index: 2;
   position: relative;
-  color: #808080;
+  color: #fff;
 }
 .my-container img {
   display: block;
@@ -382,6 +382,6 @@ button {
   opacity: 0.6;
 }
 article {
-  background: #fff;
+  background: #808080;
   padding: 15px;
 }
