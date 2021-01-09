@@ -43,8 +43,8 @@ echo "<table class='container'>
         <font>Username</font>
       </td>
       <td>";
-while($row = mysqli_fetch_array($selected_name)) {
-  echo "<input class='input' type='text' name='name' id='name' value='" . $row['name'] . "'>";
+while($row = mysqli_fetch_array($selected_fullname)) {
+  echo "<input class='input' type='text' name='fullname' id='fullname' value='" . $row['fullname'] . "'>";
 }
 echo "
       </td>
@@ -54,8 +54,8 @@ echo "
         <font>Password</font>
       </td>
       <td>";
-while($row = mysqli_fetch_array($selected_pass)) {
-  echo "<input class='input' type='text' name='pass' id='pass' value='" . $row['pass'] . "'>";
+while($row = mysqli_fetch_array($selected_name)) {
+  echo "<input class='input' type='text' name='name' id='pass' value='" . $row['name'] . "'>";
 }
 echo "
       </td>
@@ -67,17 +67,6 @@ echo "
       <td>";
 while($row = mysqli_fetch_array($selected_email)) {
   echo "<input class='input' type='text' name='email' id='email' value='" . $row['email'] . "'>";
-}
-echo "
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <font>Full Name</font>
-      </td>
-      <td>";
-while($row = mysqli_fetch_array($selected_fullname)) {
-  echo "<input class='input' type='text' name='fullname' id='email' value='" . $row['fullname'] . "'>";
 }
 echo "
       </td>
