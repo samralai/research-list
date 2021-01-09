@@ -14,24 +14,32 @@
         <i class="fas fa-bars"></i>
       </label>
       <label class="logo">Project List</label>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="news.html">News</a></li>
-        <li><a href="login.html">SignIn</a></li>
-        <li><a href="signup.html">SignUp</a></li>
-      </ul>
-    </nav>
-		<div allign="center">
-		<?php
+<?php
+session_start();
+$id = $_SESSION['id'];
+
+echo "<ul>
+        <li><a href='./'>Home</a></li>
+        <li><a href='projects.html'>Projects</a></li>
+        <li><a href='news.php'>News</a></li>";
+if(is_null($id)) {
+  echo "<li><a href='login.html'>SignIn</a></li>
+  <li><a href='signup.html'>SignUp</a></li>";
+} else {
+  echo "<li><a class='active' href='myprofile.php'>My Profile</a></li>";
+}
+echo "</ul></nav><div allign='center'>";
+
 $con=mysqli_connect("localhost","phpmyadmin","phpmyadmiN@123","users");
 // Check connection
 if (mysqli_connect_errno())
 {
 echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
-session_start();
-$id = $_SESSION['id'];
+
+if(is_null($id)) {
+  echo "<table><center><h1 style='color:white'>You are not logged in!</h1></br><h2 style='color:white'>Please sign in to your account.</h2></br><h2 style='color:white'>If you don't have an account you can sign up!</h2></center><table>";
+} else {
 $selected_name = mysqli_query($con,"SELECT name FROM users WHERE id=$id");
 $selected_pass = mysqli_query($con,"SELECT pass FROM users WHERE id=$id");
 $selected_email = mysqli_query($con,"SELECT email FROM users WHERE id=$id");
@@ -112,6 +120,7 @@ echo "<table class='container'>
     </tr>
   </form>
 </table>";
+}
 
 mysqli_close($con);
 ?>
