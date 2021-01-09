@@ -19,7 +19,7 @@
                 echo ("Succeeded!");
                 session_start();
                 $_SESSION["id"] = $row['id'];
-                header("Location: ../index.html");
+                header("Location: ../");
             }
         } else {
             echo ("Failed - Error: Invalid Password");
