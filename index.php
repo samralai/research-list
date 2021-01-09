@@ -20,7 +20,7 @@ session_start();
 $id = $_SESSION['id'];
 echo "<ul>
         <li><a class='active' href='./'>Home</a></li>
-        <li><a href='projects.html'>Projects</a></li>
+        <li><a href='projects.php'>Projects</a></li>
         <li><a href='news.php'>News</a></li>";
 if(is_null($id)) {
   echo "<li><a href='login.html'>SignIn</a></li>
@@ -39,7 +39,7 @@ if(is_null($id)) {
         </video>
       </div>
       <div class="button1">
-        <a href="projects.html" class="button">Start</a>
+        <a href="projects.php" class="button">Start</a>
       </div>
     </div>
     <footer>
