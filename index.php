@@ -26,7 +26,8 @@ if(is_null($id)) {
   echo "<li><a href='login.html'>SignIn</a></li>
   <li><a href='signup.html'>SignUp</a></li>";
 } else {
-  echo "<li><a href='myprofile.php'>My Profile</a></li>";
+  echo "<li><a href='myprofile.php'>My Profile</a></li>
+  <li><a href='utility/logout.php'>Log Out</a></li>";
 }
 ?>
       </ul>

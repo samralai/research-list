@@ -31,10 +31,37 @@ if(is_null($id)) {
 }
 ?>
       </ul>
-    </nav>
+    </nav>    
       <footer>
       <a href="https://www.bilgi.edu.tr/tr/">
           <img class="logos" src="img/bilgilogo.png" style="max-width:10%;height: auto;" alt="altlab" title="altlab" align="left"/></a>
       </footer>
+      <form class="projects-body">
+        <div class="home-box custom-box hide">
+          <h3>Instruction:</h3>
+          <p>Total number of questions: <span class="total-questions">3</span></p>
+          <button type="button" class="btn">Ready</button>
+        </div>
+        <div class="quiz-box custom-box">
+          <div class="question-number">
+            
+          </div>
+          <div class="question-text">
+            
+          </div>
+          <div class="option-container">
+            
+          </div>
+          <div class="next-question-btn">
+            <button type="button" class="btn" onclick="next()">Next</button>
+          </div>
+          <div class="answers-indicator">
+            
+          </div>
+          
+        </div>
+        <script src="script.js"></script>
+        <script src="app.js"></script>
+      </form>
   </body>
 </html>
