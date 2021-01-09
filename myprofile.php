@@ -35,6 +35,7 @@ $id = $_SESSION['id'];
 $selected_name = mysqli_query($con,"SELECT name FROM users WHERE id=$id");
 $selected_pass = mysqli_query($con,"SELECT pass FROM users WHERE id=$id");
 $selected_email = mysqli_query($con,"SELECT email FROM users WHERE id=$id");
+$selected_fullname = mysqli_query($con,"SELECT fullname FROM users WHERE id=$id");
 echo "<table class='container'>
   <form name='myform' action='./utility/xupdate.php' method='POST'>
     <tr>
@@ -66,6 +67,17 @@ echo "
       <td>";
 while($row = mysqli_fetch_array($selected_email)) {
   echo "<input class='input' type='text' name='email' id='email' value='" . $row['email'] . "'>";
+}
+echo "
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <font>Full Name</font>
+      </td>
+      <td>";
+while($row = mysqli_fetch_array($selected_fullname)) {
+  echo "<input class='input' type='text' name='fullname' id='email' value='" . $row['fullname'] . "'>";
 }
 echo "
       </td>

@@ -3,6 +3,7 @@
   $username= $_POST['name'];
   $password= $_POST['pass'];
   $email= $_POST['email'];
+  $fullname= $_POST['fullname'];
   $id= $_SESSION['id'];
   if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     echo("Invalid email format");
@@ -11,7 +12,7 @@
     if(!$conn){
         die("CONNECTION FAILED".mysqli_connect_error());
     }
-    $sql="UPDATE users.users SET name = '$username', pass = '$password', email = '$email' WHERE (id = '" . $id . "')";
+    $sql="UPDATE users.users SET name = '$username', pass = '$password', email = '$email', fullname = '$fullname' WHERE (id = '" . $id . "')";
     $result=mysqli_query($conn,$sql);
     if($result == 1) {
       echo $sql;
