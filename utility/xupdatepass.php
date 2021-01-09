@@ -11,6 +11,8 @@
         die("CONNECTION FAILED".mysqli_connect_error());
     }
     $check = "SELECT * FROM users.users WHERE id = '" . $id . "' AND  pass='$password'";
+    echo $check;
+    echo "<br>";
     $checkresult=mysqli_query($conn,$check);
     if($checkresult->num_rows > 0) {
         $sql="UPDATE users.users SET pass = '$password' WHERE (id = '" . $id . "')";

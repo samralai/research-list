@@ -14,7 +14,7 @@
   $checkvalue = "SELECT * FROM users.users WHERE id != ('" . $id . "') AND (name='$username' OR email='$email')";
   $checkresult=mysqli_query($conn,$checkvalue);
 
-  if($checkresult->num_rows > 0) {
+  if($checkresult->num_rows = 0) {
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
       echo("Invalid email format");
     } else {
